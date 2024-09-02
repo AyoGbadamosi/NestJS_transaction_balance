@@ -8,7 +8,8 @@ import { status } from './enums/enum';
 
 @Injectable()
 export class TransactionsService {
-  constructor(@InjectModel(User.name) private readonly userModel: Model<User>, @InjectModel(Transaction.name) private readonly transactionModel: Model<Transaction>) { }
+  constructor(@InjectModel(User.name) private readonly userModel: Model<User>,
+    @InjectModel(Transaction.name) private readonly transactionModel: Model<Transaction>) { }
 
   async createTransaction(dto: CreateTransactionDto): Promise<any> {
     const { userId, amount, type } = dto;
