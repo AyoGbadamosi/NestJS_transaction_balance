@@ -15,6 +15,5 @@ export class CreateTransactionDto {
   @ApiProperty({ example: 'credit', description: 'Transaction type, either debit or credit' })
   @IsNotEmpty()
   @IsIn(['debit', 'credit'])
-  @IsNotEmpty()
   type: string;
 }
