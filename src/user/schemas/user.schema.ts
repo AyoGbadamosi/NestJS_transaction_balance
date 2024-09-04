@@ -15,6 +15,12 @@ export class User extends Document {
   @Prop({ default: 0 })
   walletBalance: number;
 
+  @Prop({ default: false })
+  isDisabled: boolean;
+
+  // @Prop({ enum: Object.values(Role), default: Role.User })
+  // role: Role;
+
   @Prop({ default: Date.now })
   createdAt: Date;
 }

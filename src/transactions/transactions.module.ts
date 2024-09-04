@@ -9,10 +9,10 @@ import { User, UserSchema } from '../user/schemas/user.schema';
   imports: [
     MongooseModule.forFeature([
       { name: Transaction.name, schema: TransactionSchema },
-      { name: User.name, schema: UserSchema }, // Import User schema to interact with user data during transactions
+      { name: User.name, schema: UserSchema },
     ]),
   ],
   controllers: [TransactionsController],
   providers: [TransactionsService],
 })
-export class TransactionModule {}
+export class TransactionModule { }

@@ -8,10 +8,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // Swagger configuration
   const config = new DocumentBuilder()
-    .setTitle('Your API Title')
-    .setDescription('Your API Description')
+    .setTitle('Transaction Feature API')
+    .setDescription('API documentation for the Transaction feature')
     .setVersion('1.0')
-    .addBearerAuth() // Optional, if you're using authentication
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document); // Path to Swagger UI

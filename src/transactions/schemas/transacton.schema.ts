@@ -13,8 +13,8 @@ export class Transaction extends Document {
   @Prop({ default: 'pending' })
   status: string; // 'pending', 'completed', 'failed'
 
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'User', required: true })
-  userId: User;
+  @Prop({})
+  userId: string;
 
   @Prop({ default: Date.now })
   createdAt: Date;
